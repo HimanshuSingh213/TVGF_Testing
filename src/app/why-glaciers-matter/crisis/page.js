@@ -141,8 +141,8 @@ const CrisisPage = () => {
                     >
                         <FaCubes className="text-white/20 text-6xl mx-auto mb-8" />
                         <h2 className="text-3xl md:text-5xl font-nohemi text-white leading-[1.1] tracking-tight">
-                            "Glacier Risk Is Systemic Risk.<br />
-                            <span className="text-white/80 italic font-light">When water infrastructure destabilises, entire systems spiral.</span>"
+                            &quot;Glacier Risk Is Systemic Risk.<br />
+                            <span className="text-white/80 italic font-light">When water infrastructure destabilises, entire systems spiral.</span>&quot;
                         </h2>
                     </motion.div>
                 </div>

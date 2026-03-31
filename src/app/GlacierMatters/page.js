@@ -103,9 +103,9 @@ export default function WhyGlaciersPage() {
                     >
                         <FaCubes className="text-white/20 text-6xl mx-auto mb-8" />
                         <h2 className="text-3xl md:text-5xl font-nohemi text-white leading-[1.1] tracking-tight">
-                            "When water infrastructure destabilises, <br />
+                            &quot;When water infrastructure destabilises, <br />
                             <span className="text-white/80 italic font-light">entire systems spiral.</span> <br /> 
-                            Glacier risk is systemic risk."
+                            Glacier risk is systemic risk.&quot;
                         </h2>
                     </motion.div>
                 </div>
@@ -127,7 +127,7 @@ export default function WhyGlaciersPage() {
                             Why the <br /> <span className="text-glacier-teal italic">Hindu Kush Himalaya</span> Matters
                         </h2>
                         <p className="text-lg md:text-xl text-glacier-navy/70 leading-relaxed font-light mb-6">
-                            The Hindu Kush Himalaya constitutes the world’s "Third Pole" — storing the largest volume of ice outside the Arctic and Antarctic. It forms the headwaters of 10 major river systems traversing across Asia.
+                            The Hindu Kush Himalaya constitutes the world&apos;s &quot;Third Pole&quot; — storing the largest volume of ice outside the Arctic and Antarctic. It forms the headwaters of 10 major river systems traversing across Asia.
                         </p>
                         <p className="text-lg md:text-xl text-glacier-navy/70 leading-relaxed font-light">
                             When Himalayan glaciers retreat, water security across South Asia breaks down — directly threatening agricultural output, metropolitan stability, and biodiversity.

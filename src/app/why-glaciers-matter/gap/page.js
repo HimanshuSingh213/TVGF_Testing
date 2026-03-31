@@ -115,10 +115,10 @@ const GapPage = () => {
                 <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
                     <FaLink className="text-glacier-teal text-5xl mb-8" />
                     <h3 className="text-3xl md:text-5xl font-nohemi text-white mb-8 tracking-tight leading-[1.1]">
-                        "Preparedness has no clear owner, <br className="hidden md:block"/> and communities pay the price."
+                        &quot;Preparedness has no clear owner, <br className="hidden md:block"/> and communities pay the price.&quot;
                     </h3>
                     <p className="text-glacier-teal text-xl md:text-2xl font-bold uppercase tracking-[0.2em] font-nohemi italic border-t border-white/10 pt-8 mt-4">
-                        "Investing upstream protects life downstream."
+                        &quot;Investing upstream protects life downstream.&quot;
                     </p>
                 </div>
             </section>

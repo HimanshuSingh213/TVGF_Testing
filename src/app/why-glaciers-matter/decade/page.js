@@ -73,8 +73,8 @@ const DecadePage = () => {
                         <span className="text-glacier-crimson font-nohemi tracking-widest uppercase text-xs font-bold">Tipping Point Alert</span>
                     </div>
                     <h2 className="text-3xl md:text-5xl font-nohemi leading-tight tracking-tight">
-                        "13 October 2025 — first confirmed climate tipping point (coral mortality).<br />
-                        <span className="text-glacier-crimson italic">Glaciers are next.</span>"
+                        &quot;13 October 2025 — first confirmed climate tipping point (coral mortality).<br />
+                        <span className="text-glacier-crimson italic">Glaciers are next.</span>&quot;
                     </h2>
                 </div>
             </section>
@@ -197,8 +197,8 @@ const DecadePage = () => {
 
                 <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
                     <h3 className="text-3xl md:text-5xl lg:text-6xl font-nohemi text-white mb-16 tracking-tight leading-[1.1]">
-                        "Investing in glaciers is not charity — <br />
-                        <span className="text-glacier-teal italic">it is survival economics.</span>"
+                        &quot;Investing in glaciers is not charity — <br />
+                        <span className="text-glacier-teal italic">it is survival economics.</span>&quot;
                     </h3>
                     <a href="/get-involved/glacier-guardian" className="px-12 py-5 bg-glacier-teal text-white rounded-full font-nohemi font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-glacier-navy transition-all duration-300 shadow-2xl">
                         Join as Glacier Guardian
