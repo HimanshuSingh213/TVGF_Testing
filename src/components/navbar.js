@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
   const [isActive, setIsActive] = useState("/")
 
   const pathname = usePathname();
-  const dropdownRef = useRef(null);
+  const navRef = useRef(null);
 
   const structuredPages = [
     {
@@ -89,22 +90,27 @@ export default function Navbar() {
 
   useEffect(() => {
     setIsActive(pathname)
-  }, [])
+  }, [pathname])
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDesktopDropdown(null);
+      // If the click is outside the entire navbar structure
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setDesktopDropdown(null); // Close desktop mega-menu
+        setMobileDropdown(null);  // Close mobile accordion sub-menus
+        setIsOpen(false);         // Close the entire mobile drawer
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const isTransparent = pathname === "/" && showNavbar;
+
   return (
     <nav
-      className={`fixed w-full z-50 transition-transform duration-300 font-cabin rounded-b-xl  ${showNavbar ? "translate-y-0" : ""
-        } border-b border-white/20 bg-glacier-primary shadow-sm`}
+      ref={navRef}
+      className={`fixed w-full z-50 transition-all duration-300 font-cabin rounded-b-xl ${isTransparent ? "bg-transparent py-4 border-b border-white/20" : "bg-white shadow-md py-2 border-b border-gray-100"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between h-14 items-center">
@@ -116,13 +122,13 @@ export default function Navbar() {
               alt="Company Logo"
               width={140}
               height={48}
-              className="h-8 sm:h-10 w-auto object-contain rounded-lg"
+              className={`h-8 sm:h-10 w-auto object-contain rounded-lg transition-all duration-300 brightness-0${isTransparent ? "" : ""}`}
               priority
             />
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex flex-1 items-center justify-end" ref={dropdownRef}>
+          <div className="hidden md:flex flex-1 items-center justify-end">
             <div className="flex md:space-x-4 lg:space-x-6 items-center h-full mr-6">
               {structuredPages.map((page) => (
                 <div
@@ -134,51 +140,73 @@ export default function Navbar() {
                   {/* Main Nav Link */}
                   <Link
                     href={page.href}
-                    className={`flex items-center gap-1 text-white font-medium text-xs md:text-[13px] lg:text-sm hover:text-glacier-dark transition-colors font-nohemi ${isActive === page.href ? "underline" : ""}`}
+                    className={`flex items-center gap-1 font-medium text-xs md:text-[13px] lg:text-sm transition-colors font-nohemi h-full 
+                      ${isTransparent ? "" : "text-glacier-navy hover:text-glacier-teal"}
+                      ${isActive === page.href ? "underline decoration-2 underline-offset-4 text-glacier-teal" : ""}`}
                   >
                     {page.name}
-                    {page.subpages?.length > 0 && <ChevronDown size={14} />}
+                    {page.subpages?.length > 0 && (
+                      <motion.span
+                        animate={{ rotate: desktopDropdown === page.name ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronDown size={14} />
+                      </motion.span>
+                    )}
                   </Link>
 
                   {/* Dropdown */}
-                  {page.subpages?.length > 0 && desktopDropdown === page.name && (
-                    <div className="fixed left-0 top-14 w-full bg-white text-black shadow-lg border-t border-gray-100 z-50">
-                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
-                          {page.subpages.map((subpage) => (
-                            <Link
-                              key={subpage.label}
-                              href={subpage.href}
-                              onClick={() => setDesktopDropdown(null)}
-                              className="block group"
-                            >
-                              <h3 className="text-glacier-dark font-semibold text-base mb-1 group-hover:text-glacier-primary transition-colors font-nohemi">
-                                {subpage.label}
-                              </h3>
-                              <p className="text-gray-600 text-sm font-cabin leading-relaxed group-hover:text-gray-900 transition-colors">
-                                {subpage.desc}
-                              </p>
-                            </Link>
-                          ))}
+                  <AnimatePresence>
+                    {page.subpages?.length > 0 && desktopDropdown === page.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className={`fixed left-0 w-full bg-white text-black shadow-lg border-t border-gray-100 z-50 
+                          ${isTransparent ? "top-[88px]" : "top-[72px]"}`}
+                      >
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
+                            {page.subpages.map((subpage) => (
+                              <Link
+                                key={subpage.label}
+                                href={subpage.href}
+                                onClick={() => setDesktopDropdown(null)}
+                                className="block group"
+                              >
+                                <h3 className="text-glacier-navy font-semibold text-base mb-1 group-hover:text-glacier-teal transition-colors font-nohemi">
+                                  {subpage.label}
+                                </h3>
+                                <p className="text-glacier-warmGrey text-sm font-cabin leading-relaxed group-hover:text-gray-900 transition-colors">
+                                  {subpage.desc}
+                                </p>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
 
             {/* CTAs */}
-            <div className="flex items-center gap-3 border-l border-white/20 pl-6">
+            <div className={`flex items-center gap-3 border-l pl-6 ${isTransparent ? 'border-white/20' : 'border-gray-200'}`}>
               <Link
                 href="/get-involved/partner"
-                className="hidden lg:flex items-center justify-center px-4 py-2 border-2 border-glacier-primary text-white hover:bg-glacier-primary text-sm font-medium rounded-md transition-colors font-cabin"
+                className={`hidden lg:flex items-center justify-center px-4 py-2 border-2 text-sm font-medium rounded-md transition-colors font-cabin backdrop-blur-sm
+                  ${isTransparent
+                    ? "border-white text-white hover:bg-white hover:text-glacier-navy"
+                    : "border-glacier-teal text-glacier-navy hover:bg-glacier-teal hover:text-white"
+                  }`}
               >
                 Partner With Us
               </Link>
               <Link
                 href="/get-involved/glacier-guardian"
-                className="flex items-center justify-center px-4 py-2 bg-glacier-dark text-white hover:bg-glacier-dark/90 text-sm font-medium rounded-md transition-colors font-cabin"
+                className="flex items-center justify-center px-4 py-2 bg-glacier-navy text-white hover:bg-glacier-navy/90 text-sm font-medium rounded-md transition-colors font-cabin"
               >
                 Join as Glacier Guardian
               </Link>
@@ -192,54 +220,109 @@ export default function Navbar() {
                 setIsOpen(!isOpen);
                 setMobileDropdown(null);
               }}
-              className="text-white hover:text-glacier-dark transition-colors"
+              className={`transition-colors ${isTransparent ? "text-white hover:text-white/80" : "text-glacier-navy hover:text-glacier-teal"}`}
               aria-label="Toggle Menu"
             >
               {isOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
-
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-4 pt-3 pb-6 space-y-4 backdrop-blur-md shadow-md border-t border-white/20">
-          {structuredPages.map((link) => (
-            <div key={link.name}>
-              <button
-                onClick={() =>
-                  setMobileDropdown((prev) =>
-                    prev === link.name ? null : link.name
-                  )
-                }
-                className="w-full flex justify-between items-center text-left text-white font-medium text-base py-2"
-              >
-                {link.name}
-                {link.subpages?.length > 0 && <ChevronDown size={16} />}
-              </button>
-
-              {mobileDropdown === link.name && link.subpages?.length > 0 && (
-                <div className="ml-4 mt-2 space-y-2">
-                  {link.subpages.map((subpage) => (
-                    <Link
-                      key={subpage.label}
-                      href={subpage.href}
-                      onClick={() => {
-                        setIsOpen(false);
-                        setMobileDropdown(null);
-                      }}
-                      className="block text-white text-sm hover:text-glacier-primary transition-colors font-cabin"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden bg-glacier-navy shadow-xl border-t border-white/10 absolute w-full left-0 top-full"
+          >
+            <div className="px-4 pt-3 pb-6 space-y-4">
+              {structuredPages.map((link) => (
+                <div key={link.name}>
+                  {link.subpages?.length > 0 ? (
+                    <button
+                      onClick={() =>
+                        setMobileDropdown((prev) =>
+                          prev === link.name ? null : link.name
+                        )
+                      }
+                      className="w-full flex justify-between items-center text-left text-white font-medium text-base py-2 font-nohemi"
                     >
-                      {subpage.label}
+                      {link.name}
+                      <motion.span
+                        animate={{ rotate: mobileDropdown === link.name ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-glacier-teal"
+                      >
+                        <ChevronDown size={16} />
+                      </motion.span>
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-white font-medium text-base py-2 font-nohemi"
+                    >
+                      {link.name}
                     </Link>
-                  ))}
+                  )}
+
+                  {/* Mobile Accordion SubPages */}
+                  <AnimatePresence>
+                    {mobileDropdown === link.name && link.subpages?.length > 0 && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="ml-4 mt-2 space-y-2 pb-2 border-l-2 border-white/20 pl-3">
+                          {link.subpages.map((subpage) => (
+                            <Link
+                              key={subpage.label}
+                              href={subpage.href}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setMobileDropdown(null);
+                              }}
+                              className="block text-white/80 text-sm hover:text-glacier-teal transition-colors font-cabin py-1.5"
+                            >
+                              {subpage.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-              )}
+              ))}
+
+              {/* Mobile CTAs */}
+              <div className="pt-4 flex flex-col gap-3 border-t border-white/20 mt-4">
+                <Link
+                  href="/get-involved/partner"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full flex items-center justify-center px-4 py-2 border-2 border-white text-white hover:bg-white hover:text-glacier-navy text-sm font-medium rounded-md transition-colors font-cabin"
+                >
+                  Partner With Us
+                </Link>
+                <Link
+                  href="/get-involved/glacier-guardian"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full flex items-center justify-center px-4 py-2 bg-glacier-teal text-white hover:bg-glacier-teal/90 text-sm font-medium rounded-md transition-colors font-cabin"
+                >
+                  Join as Glacier Guardian
+                </Link>
+              </div>
+
             </div>
-          ))}
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
