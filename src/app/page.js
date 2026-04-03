@@ -78,7 +78,7 @@ export default function HomePage() {
             className="w-full max-w-4xl border-t border-white/20 pt-8"
           >
             <p className="font-cabin text-white text-lg md:text-xl italic">
-              "The glaciers are not just melting. They are disappearing faster than we are preparing for."
+              &quot;The glaciers are not just melting. They are disappearing faster than we are preparing for.&quot;
             </p>
           </motion.div>
 

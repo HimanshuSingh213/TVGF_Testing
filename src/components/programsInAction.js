@@ -54,7 +54,7 @@ export default function ProgramsSnapshot() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8 bg-glacier-teal"></div>
             <h2 className="text-sm font-nohemi text-glacier-teal tracking-widest uppercase">
-              What We're Building
+              What We&apos;re Building
             </h2>
             <div className="h-px w-8 bg-glacier-teal"></div>
           </div>
