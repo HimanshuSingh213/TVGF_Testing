@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(true);
   const [desktopDropdown, setDesktopDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [isActive, setIsActive] = useState("/");
@@ -77,9 +77,9 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 60) {
-        setShowNavbar(false);
+        setIsScrolled(false);
       } else {
-        setShowNavbar(true);
+        setIsScrolled(true);
       }
     };
 
@@ -103,7 +103,14 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const isTransparent = pathname === "/" && showNavbar;
+  const isTransparent = pathname === "/" && isScrolled;
+  const isLinkActive = (href) => {
+    if (pathname === href) return true;
+
+    if (href !== "/" && pathname.startsWith(`${href}/`)) return true;
+
+    return false;
+  };
 
   return (
     <nav
@@ -136,9 +143,9 @@ export default function Navbar() {
                 >
                   <Link
                     href={page.href}
-                    className={`flex items-center gap-1 font-medium text-xs md:text-[13px] lg:text-sm transition-colors font-nohemi h-full 
-                      ${isTransparent ? "text-white" : "text-glacier-navy hover:text-glacier-teal"}
-                      ${isActive === page.href ? "underline decoration-2 underline-offset-4 text-glacier-teal" : ""}`}
+                    className={`flex items-center gap-1 font-medium text-xs md:text-[13px] lg:text-sm transition-colors font-nohemi h-full text-center
+                      ${isTransparent ? "" : "text-glacier-navy hover:text-glacier-teal"}
+                      ${isLinkActive(page.href) ? "text-glacier-teal underline decoration-2 underline-offset-4" : "text-glacier-navy hover:text-glacier-teal"}`}
                   >
                     {page.name}
                     {page.subpages?.length > 0 && (
@@ -170,7 +177,8 @@ export default function Navbar() {
                                 onClick={() => setDesktopDropdown(null)}
                                 className="block group"
                               >
-                                <h3 className="text-glacier-navy font-semibold text-base mb-1 group-hover:text-glacier-teal transition-colors font-nohemi">
+                                <h3 className={`text-glacier-navy font-semibold text-base mb-1 group-hover:text-glacier-teal transition-colors font-nohemi 
+                                  ${isLinkActive(subpage.href) ? "text-glacier-teal underline decoration-2 underline-offset-4" : "text-glacier-navy hover:text-glacier-teal"}`}>
                                   {subpage.label}
                                 </h3>
                                 <p className="text-glacier-warmGrey text-sm font-cabin leading-relaxed group-hover:text-gray-900 transition-colors">
@@ -190,7 +198,7 @@ export default function Navbar() {
             <div className={`flex items-center gap-3 border-l pl-6 ${isTransparent ? 'border-white/20' : 'border-gray-200'}`}>
               <Link
                 href="/get-involved/partner"
-                className={`hidden lg:flex items-center justify-center px-4 py-2 border-2 text-sm font-medium rounded-md transition-colors font-cabin backdrop-blur-sm
+                className={`hidden lg:flex items-center justify-center text-center px-4 py-2 border-2 text-sm font-medium rounded-md transition-colors font-cabin backdrop-blur-sm
                   ${isTransparent
                     ? "border-white text-white hover:bg-white hover:text-glacier-navy"
                     : "border-glacier-teal text-glacier-navy hover:bg-glacier-teal hover:text-white"
@@ -200,7 +208,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/get-involved/glacier-guardian"
-                className="flex items-center justify-center px-4 py-2 bg-glacier-navy text-white hover:bg-glacier-navy/90 text-sm font-medium rounded-md transition-colors font-cabin"
+                className="flex items-center justify-center text-center px-4 py-2 bg-glacier-navy text-white hover:bg-glacier-navy/90 text-sm font-medium rounded-md transition-colors font-cabin"
               >
                 Join as Glacier Guardian
               </Link>
