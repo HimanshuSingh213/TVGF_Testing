@@ -113,7 +113,7 @@ export default function OurStory() {
                             </div>
                             <h2 className="text-[10px] font-nohemi text-glacier-teal tracking-[0.4em] uppercase mb-8 opacity-60 group-hover:text-white transition-opacity">The Vision</h2>
                             <p className="text-2xl md:text-3xl text-glacier-navy font-nohemi italic leading-tight group-hover:text-white transition-colors">
-                                "A world where protected glaciers secure water security, climate stability, and resilient futures for all."
+                                &quot;A world where protected glaciers secure water security, climate stability, and resilient futures for all.&quot;
                             </p>
                         </motion.div>
 
@@ -213,7 +213,7 @@ export default function OurStory() {
                     <div className="max-w-4xl mx-auto text-center border-t border-glacier-navy/5 pt-24">
                         <div className="mb-24 px-6">
                             <h2 className="text-xl md:text-3xl font-nohemi text-glacier-navy mb-12 tracking-tight italic opacity-60 leading-relaxed max-w-2xl mx-auto">
-                                "Glaciers protected legally and culturally as living entities."
+                                &quot;Glaciers protected legally and culturally as living entities.&quot;
                             </h2>
                             <div className="inline-flex items-center gap-4 py-3 px-8 bg-glacier-teal text-white rounded-full font-nohemi text-[10px] uppercase tracking-[0.4em] font-bold shadow-xl shadow-glacier-teal/20">
                                 <FaBalanceScale className="text-sm" />

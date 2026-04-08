@@ -22,7 +22,7 @@ export default function ProgramsPage() {
           </div>
           <div className="lg:w-2/5 lg:pl-10 lg:border-l-2 border-glacier-lightTeal/40 pb-2">
             <p className="text-lg md:text-xl text-glacier-warmGrey leading-relaxed font-cabin">
-              TVGF's programmes operate across the SPACE Framework —{' '}
+              TVGF&apos;s programmes operate across the SPACE Framework —{' '}
               <span className="text-glacier-teal font-semibold">Science, Policy, Action, Culture, and Education.</span>{' '}
               Each is designed to address a specific gap in the preparedness ecosystem.
             </p>
@@ -114,7 +114,7 @@ export default function ProgramsPage() {
               </div>
               <h3 className="text-3xl font-bold font-nohemi text-glacier-navy mb-4">GlacierX Festival</h3>
               <p className="text-base text-glacier-warmGrey mb-8 leading-relaxed font-cabin">
-                An immersive convening where science, art, ritual, and policy converge to reimagine humanity's relationship with ice.
+                An immersive convening where science, art, ritual, and policy converge to reimagine humanity&apos;s relationship with ice.
               </p>
 
               <div className="flex flex-col gap-4 mb-10 flex-grow pt-6 border-t border-glacier-light/50">

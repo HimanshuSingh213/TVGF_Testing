@@ -27,7 +27,7 @@ export default function GlacierXFestivalPage() {
                             GlacierX Festival
                         </h1>
                         <p className="text-lg md:text-xl text-glacier-offwhite/80 max-w-3xl leading-relaxed font-cabin mb-10">
-                            An immersive convening where science, art, ritual, and policy converge to reimagine humanity's relationship with ice.
+                            An immersive convening where science, art, ritual, and policy converge to reimagine humanity&apos;s relationship with ice.
                         </p>
 
                         {/* Festival CTAs */}
@@ -73,10 +73,10 @@ export default function GlacierXFestivalPage() {
                                 Framework Alignment
                             </span>
                             <h3 className="text-3xl font-nohemi font-bold text-glacier-navy mb-4 relative z-10">
-                                SPACE 'Culture' Pillar
+                                SPACE &apos;Culture&apos; Pillar
                             </h3>
                             <p className="text-base text-glacier-warmGrey font-cabin leading-relaxed relative z-10">
-                                The Festival is the flagship cultural activation of the SPACE Framework's 'Culture' pillar.
+                                The Festival is the flagship cultural activation of the SPACE Framework&apos;s &apos;Culture&apos; pillar.
                             </p>
                         </div>
 

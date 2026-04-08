@@ -23,7 +23,7 @@ export default function GlacierXPlatformPage() {
               GlacierX Platform
             </h1>
             <p className="text-xl md:text-2xl text-glacier-teal font-cabin italic leading-relaxed max-w-4xl border-l-2 border-glacier-teal pl-6">
-              "If India can build national financial and digital infrastructure at scale, we can build glacier resilience infrastructure."
+              &quot;If India can build national financial and digital infrastructure at scale, we can build glacier resilience infrastructure.&quot;
             </p>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function GlacierXPlatformPage() {
         
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-6xl font-nohemi font-bold text-white mb-8 leading-tight">
-            "We are building a protocol, not a report."
+            &quot;We are building a protocol, not a report.&quot;
           </h2>
           <p className="text-xl text-glacier-lightTeal font-cabin font-semibold uppercase tracking-[0.2em]">
             An Open Digital Public Good

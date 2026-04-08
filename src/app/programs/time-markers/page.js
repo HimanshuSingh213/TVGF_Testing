@@ -56,7 +56,7 @@ export default function TimeMarkersPage() {
                             <div className="absolute bottom-0 right-0 w-32 h-32 bg-glacier-teal/10 rounded-full blur-2xl -mr-10 -mb-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                             <h3 className="text-xl font-nohemi font-bold text-glacier-navy mb-4 relative z-10">Digital Stories</h3>
                             <p className="text-sm text-glacier-warmGrey font-cabin leading-relaxed relative z-10">
-                                QR-linked immersive content providing context on the changing landscape directly to visitors' devices.
+                                QR-linked immersive content providing context on the changing landscape directly to visitors&apos; devices.
                             </p>
                         </div>
 
@@ -121,7 +121,7 @@ export default function TimeMarkersPage() {
                         The Climate Heritage Trail
                     </h2>
                     <p className="text-lg text-glacier-warmGrey font-cabin leading-relaxed mb-10">
-                        The pilot in Uttarakhand is designed as a replicable model. The long-term vision is to create a continuous "Climate Heritage Trail" extending to <strong>Himachal Pradesh, Ladakh, and Sikkim</strong>—transforming the entire region into a living museum of climate action.
+                        The pilot in Uttarakhand is designed as a replicable model. The long-term vision is to create a continuous &quot;Climate Heritage Trail&quot; extending to <strong>Himachal Pradesh, Ladakh, and Sikkim</strong>—transforming the entire region into a living museum of climate action.
                     </p>
                     <div className="h-px w-24 bg-glacier-teal mx-auto opacity-50"></div>
                 </div>

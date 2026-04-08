@@ -85,7 +85,7 @@ export default function AboutLanding() {
                         >
                             <span className="text-[10px] text-glacier-teal font-bold tracking-[0.3em] uppercase block mb-6">Institutional Mandate</span>
                             <h2 className="text-4xl md:text-5xl lg:text-7xl font-nohemi text-glacier-navy tracking-tight leading-[1.1]">
-                                Developing <span className="text-glacier-teal italic">resilience</span> for the world's frozen assets.
+                                Developing <span className="text-glacier-teal italic">resilience</span> for the world&apos;s frozen assets.
                             </h2>
                         </motion.div>
                         
