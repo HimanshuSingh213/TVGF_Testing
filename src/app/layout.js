@@ -4,10 +4,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Voice Of Glaciers",
-  description: "The Voice Of Glaciers website",
+  title: "The Voice Of Glaciers Foundation | Glacier Resilience & Preparedness",
+  description: "A registered Section 8 nonprofit dedicated to connecting glacier science, local knowledge, and collective action for climate stability in the Hindu Kush Himalaya.",
   icons: {
-    icon: "/favicon.ico", // relative to /public
+    icon: "/favicon.ico", 
   },
 };
 

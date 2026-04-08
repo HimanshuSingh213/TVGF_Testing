@@ -125,16 +125,37 @@ export default function HCSNPage() {
                     </div>
 
                     {/* Institutional Partners specific to HCSN */}
-                    <div className="border-t border-glacier-lightTeal/20 pt-16">
-                        <span className="text-[10px] text-glacier-lightTeal font-bold tracking-[0.2em] uppercase mb-8 block text-center">Key Institutional Partners</span>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-sm font-nohemi text-glacier-offwhite/70">
-                            <span>Ministry of Earth Sciences</span>
-                            <span>IMD</span>
-                            <span>ICIMOD</span>
-                            <span>Wadia Institute</span>
-                            <span>IIT Roorkee</span>
-                            <span>ISRO</span>
-                            <span>NDMA</span>
+                    <div className="mt-24 border-t border-white/5 pt-16">
+                        <div className="text-center mb-12">
+                            <span className="text-[10px] text-glacier-teal font-bold tracking-[0.3em] uppercase block">Trusted By</span>
+                            <h3 className="text-3xl font-nohemi font-bold text-white mt-4">Key Institutional Partners</h3>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <img src="/footer/MoES.png" alt="Ministry of Earth Sciences" className="h-12 object-contain brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <img src="/footer/ICIMOD.png" alt="ICIMOD" className="h-12 object-contain brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <img src="/footer/ndma.png" alt="NDMA" className="h-12 object-contain brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <span className="font-nohemi text-sm tracking-widest text-white/50 uppercase group-hover:text-white transition-colors">Wadia Institute</span>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <span className="font-nohemi text-sm tracking-widest text-white/50 uppercase group-hover:text-white transition-colors">IMD</span>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <span className="font-nohemi text-sm tracking-widest text-white/50 uppercase group-hover:text-white transition-colors">IIT Roorkee</span>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <span className="font-nohemi text-sm tracking-widest text-white/50 uppercase group-hover:text-white transition-colors">ISRO</span>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex items-center justify-center aspect-[2/1] hover:bg-white/10 transition-colors group">
+                                <img src="/footer/iitb.png" alt="IIT B" className="h-10 object-contain brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity" />
+                            </div>
                         </div>
                     </div>
                 </div>

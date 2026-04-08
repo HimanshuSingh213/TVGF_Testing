@@ -1,115 +1,145 @@
 "use client";
+
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export default function TeamPage() {
+    useEffect(() => {
+        document.title = "Team & Advisors | The Voice of Glacier Foundation";
+    }, []);
 
-  const core = [
-    "Anurag Maloo — Founder & CEO",
-    "Sruthi Karthikeyan — Operations & Strategy | Ex-Microsoft",
-    "Shriya Harshe — Climate Adaptation & Environmental Planner",
-    "Deepthi Rao — Fellowship Program Manager",
-    "Soham Punde — Filmmaker",
-    "Harshit Rautela — Storyteller & Content Creator",
-    
-  ];
+    const placeholderImg = "https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/hero-image.webp";
 
-  const advisors = [
-    "Romola Butalia — Writer, Conservationist & Senior Media Person",
-    " Reinhold Messner - Izabella Koziell — Hold pending confirmation"
-  ];
+    const coreTeam = [
+        { name: "Anurag Maloo", title: "Founder & CEO", desc: "Mountaineer, survivalist, and innovation ecosystem builder.", img: placeholderImg },
+        { name: "Sruthi Karthikeyan", title: "Operations & Strategy", desc: "Ex-Microsoft (9 years), driving institutional scaling.", img: placeholderImg },
+        { name: "Shriya Harshe", title: "Climate Adaptation", desc: "Environmental planner specialized in mountain ecosystems.", img: placeholderImg },
+        { name: "Deepthi Rao", title: "Fellowship Manager", desc: "Orchestrating community engagement and leadership programs.", img: placeholderImg },
+        { name: "Soham Punde", title: "Filmmaker", desc: "Capturing the cinematic narrative of our changing cryosphere.", img: placeholderImg },
+        { name: "Harshit Rautela", title: "Storyteller & Content", desc: "Crafting impactful media for glacier awareness.", img: placeholderImg },
+        { name: "Divya Nawale", title: "Policy Specialist", desc: "UNEP, ex-ADB, ex-UNFCCC climate policy expert.", img: placeholderImg }
+    ];
 
-  const experts = [
-    "Dr. Arun Shrestha — Sr. Glaciologist, ex-ICIMOD, Nepal",
-    "Dr. Ashim Sattar — Glaciologist (GLOF Expert), IIT Bhubaneswar",
-    "Dr. Farooq Azam — Cryosphere Specialist, ICIMOD / IIT Indore",
-    "Dr. Anjan Ray — Navam Capital / IIT Delhi & CBRI",
-    "Ronak Sutaria — Founder & CEO, Respirer Living Sciences",
-    "Dr. Suman Sahai — Founder Chairperson, Gene Campaign",
-    "Anoop Nautiyal — Founder, SDC Foundation",
-    "Dr. Vishal Singh — Executive Director, CEDAR",
-    "Safi Ahsan Rizvi — Disaster Risk Analyst, Former IPS, ex-NDMA",
-    "Dr. Rasik Ravindra — Chairman SaGAA, Former Director NCPOR",
-    "Dr. Bryan Mark — Professor, Ohio State University",
-    "Laxman Srikanth — Advisor, Deltares, Netherlands"
-  ];
+    const expertPanel = [
+        { name: "Dr. Arun Shrestha", institution: "ex-ICIMOD, Nepal", niche: "Sr. Glaciologist", img: placeholderImg },
+        { name: "Dr. Ashim Sattar", institution: "IIT Bhubaneswar", niche: "GLOF Expert (Cryosense)", img: placeholderImg },
+        { name: "Dr. Farooq Azam", institution: "ICIMOD / IIT Indore", niche: "Cryosphere Specialist", img: placeholderImg },
+        { name: "Dr. Anjan Ray", institution: "IIT Delhi & CBRI", niche: "Sr. Scientist", img: placeholderImg },
+        { name: "Ronak Sutaria", institution: "Respirer Living Sciences", niche: "Founder & CEO", img: placeholderImg },
+        { name: "Dr. Suman Sahai", institution: "Gene Campaign", niche: "Founder Chairperson", img: placeholderImg },
+        { name: "Anoop Nautiyal", institution: "SDC Foundation", niche: "Founder", img: placeholderImg },
+        { name: "Dr. Vishal Singh", institution: "CEDAR", niche: "Executive Director", img: placeholderImg },
+        { name: "Safi Ahsan Rizvi", institution: "Former IPS", niche: "Disaster Risk Analyst", img: placeholderImg },
+        { name: "Dr. Rasik Ravindra", institution: "Chairman SaGAA", niche: "Former Director, NCPOR", img: placeholderImg },
+        { name: "Dr. Bryan Mark", institution: "Ohio State University", niche: "Byrd Polar Research", img: placeholderImg },
+        { name: "Laxman Srikanth", institution: "Deltares, Netherlands", niche: "Advisor, DRM", img: placeholderImg }
+    ];
 
-  const cardStyle =
-    "p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-lg hover:bg-white transition group cursor-pointer";
-
-  return (
-    <main className="min-h-screen bg-[#042A33] text-white p-8 md:p-20 relative overflow-hidden">
-
-      {/* Background Glow */}
-      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-[#2A787C]/20 blur-[120px] rounded-full" />
-      <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-[#8B0333]/20 blur-[120px] rounded-full" />
-
-      <div className="max-w-6xl mx-auto space-y-20 relative z-10">
-
-        {/* HERO */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 70 }}
-          className="text-center"
-        >
-          <h1 className="text-5xl font-bold">Team & Advisors</h1>
-          <p className="text-[#9CBBF0] mt-4">
-            A multidisciplinary team building resilience systems for glaciers and mountain communities.
-          </p>
-        </motion.div>
-
-        {/* CORE TEAM */}
-        <Section title="Core Team" data={core} />
-
-        {/* ADVISORS */}
-        <Section title="Advisors" data={advisors} />
-
-        <p className="text-center text-sm text-[#6B7280] italic">
-          Senior advisors being announced shortly.
-        </p>
-
-        {/* EXPERT PANEL */}
-        <Section title="Expert Panel" data={experts} />
-
-      </div>
-    </main>
-  );
-
-  function Section({ title, data }) {
     return (
-      <div>
-        <h2 className="text-xl text-[#9CBBF0] uppercase tracking-wider mb-8 text-center">
-          {title}
-        </h2>
+        <div className="min-h-screen bg-glacier-offwhite font-cabin selection:bg-glacier-teal selection:text-white">
+            <Navbar />
 
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: { transition: { staggerChildren: 0.08 } }
-          }}
-        >
-          {data.map((item) => (
-            <motion.div
-              key={item}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 }
-              }}
-              whileHover={{ scale: 1.05, y: -4 }}
-              className={cardStyle}
-            >
-              <p className="text-sm leading-relaxed group-hover:text-[#2A787C]">
-                {item}
-              </p>
+            {/* 🏔️ OG Cinematic Hero */}
+            <section className="relative h-[60vh] flex items-center justify-center pt-32 bg-glacier-navy overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img 
+                        src="/story/decade.png" 
+                        alt="Team & Advisors Background" 
+                        className="object-cover w-full h-full grayscale brightness-[0.25] scale-105"
+                    />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-glacier-navy via-transparent to-glacier-navy/60"></div>
 
-              {/* bottom accent */}
-              <div className="mt-4 w-0 h-[2px] bg-[#8B0333] group-hover:w-full transition-all duration-500" />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+                <div className="max-w-7xl mx-auto relative z-10 w-full text-center px-6">
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.95 }} 
+                        animate={{ opacity: 1, scale: 1 }} 
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
+                        <span className="inline-block text-glacier-teal font-nohemi font-bold tracking-[0.5em] text-[10px] md:text-xs uppercase mb-12 bg-white/5 px-8 py-3 rounded-full border border-white/10 backdrop-blur-xl">
+                            Our Collective IQ
+                        </span>
+                        <h1 className="text-6xl md:text-8xl lg:text-9xl font-nohemi text-white mb-6 leading-none tracking-tighter">
+                            Team & Advisors
+                        </h1>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* 🔳 Team Sections */}
+            <section className="py-32 px-6 md:px-12 bg-white relative">
+                <div className="max-w-7xl mx-auto">
+                    
+                    {/* Core Team - Larger, Professional Grid */}
+                    <div className="mb-48">
+                        <div className="text-center mb-24">
+                            <h2 className="text-4xl md:text-6xl font-nohemi text-glacier-navy tracking-tight">Core <span className="text-glacier-teal italic">Team</span></h2>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+                            {coreTeam.map((member, i) => (
+                                <motion.div 
+                                    key={i} 
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.05, duration: 0.6 }}
+                                    className="flex flex-col group"
+                                >
+                                    <div className="w-[85%] mx-auto block aspect-[4/5] rounded-[3rem] overflow-hidden mb-8 shadow-2xl shadow-glacier-navy/10 relative">
+                                        <img 
+                                            src={member.img} 
+                                            className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
+                                            alt={member.name} 
+                                        />
+                                        <div className="absolute inset-0 bg-glacier-navy/10 group-hover:bg-transparent transition-colors duration-700"></div>
+                                    </div>
+                                    <div className="px-4 text-center">
+                                        <h3 className="text-3xl font-nohemi text-glacier-navy mb-2">{member.name}</h3>
+                                        <div className="w-8 h-[2px] bg-glacier-teal my-4 mx-auto"></div>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-glacier-navy/60 mb-4">{member.title}</p>
+                                        <p className="text-sm text-glacier-navy/60 font-light leading-relaxed">{member.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Expert Panel - Scaling up images */}
+                    <div className="border-t border-glacier-navy/5 pt-32">
+                        <div className="text-center mb-24">
+                            <h2 className="text-4xl md:text-6xl font-nohemi text-glacier-navy tracking-tight">Expert <span className="text-glacier-teal italic">Panel</span></h2>
+                        </div>
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                            {expertPanel.map((exp, i) => (
+                                <motion.div 
+                                    key={i} 
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.05, duration: 0.5 }}
+                                    className="group text-center"
+                                >
+                                    <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 shadow-[0_20px_40px_-15px_rgba(0,128,128,0.1)] relative">
+                                        <img 
+                                            src={exp.img} 
+                                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                                            alt={exp.name} 
+                                        />
+                                    </div>
+                                    <h4 className="text-xl font-nohemi text-glacier-navy mb-2 group-hover:text-glacier-teal transition-colors leading-tight">{exp.name}</h4>
+                                    <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-glacier-navy/50 mb-3">{exp.niche}</p>
+                                    <p className="text-[10px] text-glacier-teal font-medium leading-tight uppercase tracking-widest">{exp.institution}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <Footer />
+        </div>
     );
-  }
 }

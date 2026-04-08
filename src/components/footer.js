@@ -44,11 +44,11 @@ const Footer = () => {
 
                         {/* distinct highlighted badge below logos */}
                         <div className="mt-16 inline-flex flex-col items-center">
-                            <div className="bg-white px-8 py-4 rounded-2xl shadow-xl shadow-glacier-navy/5 border border-glacier-teal/10 flex items-center gap-4 hover:border-glacier-teal/30 transition-colors">
-                                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-glacier-navy text-white text-[10px] font-bold tracking-widest leading-none text-center">WEF<br />2025</div>
-                                <div className="text-left font-nohemi">
+                            <div className="bg-white px-8 py-4 rounded-2xl shadow-xl shadow-glacier-navy/5 border border-glacier-teal/10 flex items-center gap-6 hover:border-glacier-teal/30 transition-colors">
+                                <img src="/partners/WEF.svg" alt="World Economic Forum" className="w-16 h-auto object-contain" />
+                                <div className="text-left font-nohemi border-l border-glacier-navy/10 pl-6">
                                     <h4 className="text-glacier-navy font-bold text-sm tracking-widest uppercase">Young Global Leader</h4>
-                                    <p className="text-glacier-navy/50 text-xs mt-1">World Economic Forum Recognition 2025</p>
+                                    <p className="text-glacier-navy/50 text-xs mt-1">Class of 2025 Recognition</p>
                                 </div>
                             </div>
                         </div>
@@ -130,6 +130,7 @@ const Footer = () => {
                                 <a href="https://www.linkedin.com/company/the-voice-of-glaciers-foundation/" className="text-white hover:text-glacier-teal transition-all hover:scale-110"><FaLinkedin className="text-2xl" /></a>
                                 <a href="https://substack.com/@thevoiceofglaciers" className="text-white hover:text-glacier-teal transition-all hover:scale-110"><SiSubstack className="text-2xl" /></a>
                                 <a href="https://www.instagram.com/thevoiceofglaciers/" className="text-white hover:text-glacier-teal transition-all hover:scale-110"><FaInstagram className="text-2xl" /></a>
+                                <a href="https://www.youtube.com/@TheVoiceofGlaciers" className="text-white hover:text-glacier-teal transition-all hover:scale-110"><FaYoutube className="text-2xl" /></a>
                             </div>
                         </div>
 
@@ -140,9 +141,10 @@ const Footer = () => {
                             </a>
                         </div>
 
-                        <div className="space-y-2 pt-4 border-t border-white/10 md:w-3/4 md:ml-auto">
+                        <div className="space-y-2 pt-4 border-t border-white/10 md:w-full md:ml-auto">
                             <p className="text-[10px] font-bold uppercase tracking-widest text-glacier-warmGrey font-nohemi leading-loose">
                                 THE VOICE OF GLACIERS FOUNDATION <br />
+                                <span className="opacity-60 text-[8px]">Reg: Section 8 Nonprofit | CI: U01100DL2024NPL429811 <br /> Registered Address: C-8/8361, Vasant Kunj, New Delhi, India</span>
                             </p>
                         </div>
 
