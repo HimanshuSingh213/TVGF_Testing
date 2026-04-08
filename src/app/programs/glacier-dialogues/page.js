@@ -8,7 +8,7 @@ export default function GlacierDialoguesPage() {
     <main className="min-h-screen bg-glacier-offwhite selection:bg-glacier-teal selection:text-white">
       <Navbar />
 
-      {/* 1. Hero Section */}
+      {/* Hero Section */}
       <section className="relative pt-40 pb-24 px-6 md:px-12 bg-glacier-navy border-b-4 border-glacier-teal">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-12">
           <div className="md:w-full">
@@ -30,7 +30,7 @@ export default function GlacierDialoguesPage() {
         </div>
       </section>
 
-      {/* 2. Program Format Details */}
+      {/* Program Format Details */}
       <section className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-glacier-light">
@@ -56,7 +56,7 @@ export default function GlacierDialoguesPage() {
         </div>
       </section>
 
-      {/* 3. Upcoming Session */}
+      {/* Upcoming Session */}
       <section className="py-24 px-6 md:px-12 bg-glacier-offwhite">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10 text-center">
@@ -64,7 +64,7 @@ export default function GlacierDialoguesPage() {
           </div>
 
           <div className="group bg-white border border-glacier-light hover:border-glacier-crimson/30 shadow-glacier-card p-8 md:p-14 relative flex flex-col md:flex-row gap-10 justify-between items-start md:items-center overflow-hidden transition-all duration-500">
-            {/* Ambient Hover Glow (Crimson) */}
+            {/* Ambient Hover Glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-glacier-crimson/5 rounded-full blur-3xl -mr-20 -mt-20 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none"></div>
             
             <div className="absolute left-0 top-0 bottom-0 w-2 bg-glacier-crimson"></div>
@@ -92,7 +92,7 @@ export default function GlacierDialoguesPage() {
         </div>
       </section>
 
-      {/* 4. Past Sessions Archive Preview */}
+      {/* Past Sessions Archive */}
       <section className="py-24 px-6 md:px-12 bg-white border-t border-glacier-light">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -108,7 +108,7 @@ export default function GlacierDialoguesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Session 1 */}
             <div className="group bg-glacier-offwhite p-8 border border-transparent hover:border-glacier-light hover:shadow-glacier-card transition-all duration-500 relative flex flex-col h-full overflow-hidden">
-              {/* Ambient Hover Glow (Teal) */}
+              {/* Ambient Glow */}
               <div className="absolute bottom-0 right-0 w-48 h-48 bg-glacier-teal/10 rounded-full blur-3xl -mr-10 -mb-10 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none"></div>
               
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-glacier-teal/50 group-hover:bg-glacier-teal transition-all duration-300"></div>
@@ -152,24 +152,6 @@ export default function GlacierDialoguesPage() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-glacier-navy w-full py-16 px-6 md:px-12 text-center border-t border-glacier-navy/50">
-        <div className="max-w-3xl mx-auto flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-nohemi font-bold text-white mb-8">
-            The Glaciers Need a Voice. Be One.
-          </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-            <Link href="/get-involved/glacier-guardian" className="bg-white text-glacier-navy px-8 py-4 rounded-md font-cabin font-bold hover:bg-glacier-offwhite hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] w-full sm:w-auto text-center">
-              Join as Glacier Guardian
-            </Link>
-            
-            <Link href="/get-involved/partner" className="bg-transparent text-white border border-glacier-teal px-8 py-4 rounded-md font-cabin font-bold hover:bg-glacier-teal transition-all duration-300 transform hover:scale-[1.02] w-full sm:w-auto text-center">
-              Partner With Us
-            </Link>
           </div>
         </div>
       </section>
