@@ -81,7 +81,7 @@ export default function TimeMarkersPage() {
                 </div>
             </section>
 
-            {/* 3. Year 1 Scope (Budget Removed, layout updated to 3 columns) */}
+            {/* Year 1 Scope */}
             <section className="py-24 px-6 md:px-12 bg-glacier-navy text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-glacier-teal/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -113,7 +113,7 @@ export default function TimeMarkersPage() {
                 </div>
             </section>
 
-            {/* 4. Strategic Goal (Replication) */}
+            {/* Strategic Goal */}
             <section className="py-24 px-6 md:px-12 bg-glacier-offwhite">
                 <div className="max-w-4xl mx-auto text-center">
                     <span className="text-[10px] text-glacier-warmGrey font-bold tracking-[0.2em] uppercase mb-4 block">Strategic Goal</span>
@@ -127,7 +127,7 @@ export default function TimeMarkersPage() {
                 </div>
             </section>
 
-            {/* 5. Specific Project CTAs (Moved from Hero to Bottom) */}
+            {/* Specific Project CTAs */}
             <section className="bg-glacier-navy w-full py-20 px-6 md:px-12 text-center border-t border-glacier-teal/30 relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-glacier-teal/10 rounded-full blur-3xl pointer-events-none"></div>
                 <div className="max-w-3xl mx-auto flex flex-col items-center relative z-10">

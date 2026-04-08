@@ -126,7 +126,7 @@ export default function Navbar() {
               alt="Company Logo"
               width={140}
               height={48}
-              className="h-8 sm:h-10 w-auto object-contain rounded-lg transition-all duration-300"
+              className={`h-8 sm:h-10 w-auto object-contain rounded-lg transition-all duration-300 brightness-0`}
               priority
             />
           </Link>
