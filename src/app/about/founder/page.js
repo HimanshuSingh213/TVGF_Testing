@@ -122,9 +122,9 @@ export default function FounderStory() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-[8px] border-glacier-offwhite">
+                            <div className="aspect-[1/1] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-[8px] border-glacier-offwhite">
                                 <img 
-                                    src="https://raw.githubusercontent.com/Adarsh108-tech/glacier-assets/main/hero-image.webp" 
+                                    src="https://lh3.googleusercontent.com/pw/AP1GczPDj4Z7yW-YETl5rAyR6EVWoQ9Fdv2Lifm7qzBo95XYQQah7uq-9TP4O3FNhOeC_QnxMMrjCt7wDH1wZZaVo1dnuyrMl_hPJKUfbUyLxoPeDm1m0ZX1n4efrSYuKsCpxEuUWdvtWULcdQgm8Y4Rsv5ZNw=w1366-h912-s-no-gm?authuser=0" 
                                     alt="Anurag Maloo - Founder TVGF" 
                                     className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000"
                                 />
