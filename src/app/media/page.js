@@ -204,7 +204,7 @@ export default function MediaPage() {
             <Link href="/media/visual" className="group flex flex-col bg-glacier-offwhite p-8 rounded-xl transition-all duration-300 border border-transparent hover:border-glacier-navy/20 hover:shadow-lg hover:-translate-y-1">
               <span className="text-glacier-navy/60 text-xs font-bold tracking-widest uppercase mb-3 block">Film</span>
               <h3 className="text-xl font-nohemi font-bold text-glacier-navy mb-3 group-hover:text-glacier-teal transition">TEDxGateway: Against All Odds</h3>
-              <p className="text-sm font-cabin text-glacier-warmGrey mb-8 flex-grow leading-relaxed">A mountaineer's tale of survival, hope, and the birth of TVGF.</p>
+              <p className="text-sm font-cabin text-glacier-warmGrey mb-8 flex-grow leading-relaxed">A mountaineer&apos;s tale of survival, hope, and the birth of TVGF.</p>
               <div className="text-xs font-cabin font-bold text-glacier-navy flex items-center justify-between pt-5 border-t border-glacier-navy/10">
                 <span>Watch Video</span>
                 <span className="group-hover:translate-x-1 transition-transform">Watch →</span>

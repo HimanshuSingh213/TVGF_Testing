@@ -95,7 +95,7 @@ export default function VisualMediaPage() {
           </div>
           <div className="mt-6 border-b border-glacier-navy/10 pb-12">
             <p className="font-cabin text-glacier-warmGrey max-w-3xl leading-relaxed">
-              In this TEDxGateway talk, TVGF Founder Anurag Maloo shares his 72-hour survival story inside a crevasse on Mt. Annapurna and how it birthed the mission to protect the world's glaciers.
+              In this TEDxGateway talk, TVGF Founder Anurag Maloo shares his 72-hour survival story inside a crevasse on Mt. Annapurna and how it birthed the mission to protect the world&apos;s glaciers.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function VisualMediaPage() {
               </div>
               <div>
                 <span className="text-[10px] font-bold text-glacier-teal uppercase tracking-widest block mb-1">Everest Mystery Documentary</span>
-                <h3 className="text-lg font-nohemi font-bold text-glacier-navy leading-tight">At Death's Door: The Miraculous Rescue</h3>
+                <h3 className="text-lg font-nohemi font-bold text-glacier-navy leading-tight">At Death&apos;s Door: The Miraculous Rescue</h3>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ export default function VisualMediaPage() {
           <div>
             <h3 className="text-lg font-bold font-nohemi text-glacier-navy mb-2">Photography Usage Policy</h3>
             <p className="font-cabin text-sm text-glacier-warmGrey leading-relaxed">
-              All images and video content in this gallery are the property of The Voice of Glaciers Foundation. Media outlets and journalists may use these images for editorial coverage provided they are explicitly credited as: <strong>"Photography courtesy of The Voice of Glaciers Foundation"</strong>. For high-resolution files or commercial inquiries, please contact our press desk.
+              All images and video content in this gallery are the property of The Voice of Glaciers Foundation. Media outlets and journalists may use these images for editorial coverage provided they are explicitly credited as: <strong>&quot;Photography courtesy of The Voice of Glaciers Foundation&quot;</strong>. For high-resolution files or commercial inquiries, please contact our press desk.
             </p>
           </div>
         </div>
