@@ -12,30 +12,30 @@ export default function FounderStory() {
     }, []);
 
     const credentials = [
-        { 
-            label: "WEF Young Global Leader 2025", 
+        {
+            label: "WEF Young Global Leader 2025",
             detail: "Selected for pioneering work in climate resilience and global leadership.",
-            icon: <FaAward /> 
+            icon: <FaAward />
         },
-        { 
-            label: "15+ Years in VC & Startups", 
+        {
+            label: "15+ Years in VC & Startups",
             detail: "Driving innovation ecosystem building across APAC.",
-            icon: <FaBuilding /> 
+            icon: <FaBuilding />
         },
-        { 
-            label: "Professional Background", 
+        {
+            label: "Professional Background",
             detail: "Previously: Regional Director, Seedstars; Regional Manager, Techstars.",
-            icon: <FaGlobeAmericas /> 
+            icon: <FaGlobeAmericas />
         },
-        { 
-            label: "Fellowships", 
+        {
+            label: "Fellowships",
             detail: "Royal Society of Arts, ORF Raisina-QUAD, Australia-India Youth Dialogue.",
-            icon: <FaGraduationCap /> 
+            icon: <FaGraduationCap />
         },
-        { 
-            label: "Mission Expeditions", 
+        {
+            label: "Mission Expeditions",
             detail: "Antarctica to Annapurna, Thar to Polar — raising awareness for SDGs.",
-            icon: <FaCompass /> 
+            icon: <FaCompass />
         }
     ];
 
@@ -46,6 +46,15 @@ export default function FounderStory() {
         { url: "/story/crisiss.jpg", caption: "Community Dialogue, Sikkim" }
     ];
 
+    const affiliations = [
+        { name: "World Economic Forum", img: "/partners/WEF.svg", role: "Young Global Leader" },
+        { name: "Techstars", img: "/partners/techstars.jpg", role: "Alumni / Manager" },
+        { name: "Observer Research Foundation", img: "/partners/ORF.jpg", role: "Raisina-QUAD Fellow" },
+        { name: "Australia-India Youth Dialogue", img: "/partners/aiyd.webp", role: "Fellow" },
+        { name: "SEALA", img: "/partners/SEALA.webp", role: "Network Leader" },
+        { name: "2041 Foundation", img: "/partners/2041F.jpg", role: "Expedition Alumni" }
+    ];
+
     return (
         <div className="min-h-screen bg-white font-cabin selection:bg-glacier-teal selection:text-white">
             <Navbar />
@@ -53,18 +62,18 @@ export default function FounderStory() {
             {/* 🏔️ OG Cinematic Hero */}
             <section className="relative h-[60vh] flex items-center justify-center pt-32 bg-glacier-navy overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img 
-                        src="/story/hkh.jpg" 
-                        alt="Founder Expedition Background" 
+                    <img
+                        src="/story/hkh.jpg"
+                        alt="Founder Expedition Background"
                         className="object-cover w-full h-full grayscale brightness-[0.3] scale-105"
                     />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-glacier-navy via-transparent to-glacier-navy/60"></div>
 
                 <div className="max-w-7xl mx-auto relative z-10 w-full text-center px-6">
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.95 }} 
-                        animate={{ opacity: 1, scale: 1 }} 
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <span className="inline-block text-glacier-teal font-nohemi font-bold tracking-[0.5em] text-[10px] md:text-xs uppercase mb-12 bg-white/5 px-8 py-3 rounded-full border border-white/10 backdrop-blur-xl">
@@ -80,10 +89,10 @@ export default function FounderStory() {
             {/* 📖 Simplified Single Visionary Section */}
             <section className="py-24 px-6 md:px-12 bg-white relative overflow-hidden">
                 <div className="max-w-6xl mx-auto">
-                    
+
                     {/* Consolidated Story Header */}
                     <div className="grid lg:grid-cols-5 gap-16 md:gap-20 mb-32 items-center">
-                        <motion.div 
+                        <motion.div
                             className="lg:col-span-3 space-y-8"
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -92,20 +101,20 @@ export default function FounderStory() {
                         >
                             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-glacier-teal font-nohemi">From Survival to Responsibility</span>
                             <h2 className="text-4xl md:text-6xl font-nohemi text-glacier-navy tracking-tight leading-[0.9]">
-                                The <span className="text-glacier-teal italic">Annapurna</span> <br className="hidden md:block"/> Threshold
+                                The <span className="text-glacier-teal italic">Annapurna</span> <br className="hidden md:block" /> Threshold
                             </h2>
                             <div className="text-lg md:text-xl text-glacier-navy/70 leading-relaxed font-light font-cabin space-y-6">
                                 <p>
-                                    In 2023, while descending from Mt. Annapurna (8,091m), Anurag Maloo suffered a near-fatal fall into a 6,000m deep icy crevasse. 
+                                    In 2023, while descending from Mt. Annapurna (8,091m), Anurag Maloo suffered a near-fatal fall into a 6,000m deep icy crevasse.
                                 </p>
                                 <p>
-                                    He spent <strong>72 excruciating hours</strong> trapped in the terrifying darkness of the glacier, without food, water, or oxygen. 
+                                    He spent <strong>72 excruciating hours</strong> trapped in the terrifying darkness of the glacier, without food, water, or oxygen.
                                 </p>
                                 <p>
                                     Survival became a mandate. His time deep within the ice crystallized a vision: that glaciers are not remote blocks of ice, but the primary infrastructure of life itself.
                                 </p>
                             </div>
-                            
+
                             <div className="pt-12 border-t border-glacier-navy/5 mt-8">
                                 <div className="w-12 h-1 bg-glacier-teal mb-8"></div>
                                 <blockquote className="text-2xl md:text-3xl lg:text-4xl text-glacier-navy font-nohemi italic leading-tight tracking-tight relative pr-4 md:pr-12">
@@ -115,7 +124,7 @@ export default function FounderStory() {
                             </div>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                             className="lg:col-span-2 relative"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -123,9 +132,9 @@ export default function FounderStory() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
                             <div className="aspect-[1/1] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-[8px] border-glacier-offwhite">
-                                <img 
-                                    src="https://lh3.googleusercontent.com/pw/AP1GczPDj4Z7yW-YETl5rAyR6EVWoQ9Fdv2Lifm7qzBo95XYQQah7uq-9TP4O3FNhOeC_QnxMMrjCt7wDH1wZZaVo1dnuyrMl_hPJKUfbUyLxoPeDm1m0ZX1n4efrSYuKsCpxEuUWdvtWULcdQgm8Y4Rsv5ZNw=w1366-h912-s-no-gm?authuser=0" 
-                                    alt="Anurag Maloo - Founder TVGF" 
+                                <img
+                                    src="https://lh3.googleusercontent.com/pw/AP1GczPDj4Z7yW-YETl5rAyR6EVWoQ9Fdv2Lifm7qzBo95XYQQah7uq-9TP4O3FNhOeC_QnxMMrjCt7wDH1wZZaVo1dnuyrMl_hPJKUfbUyLxoPeDm1m0ZX1n4efrSYuKsCpxEuUWdvtWULcdQgm8Y4Rsv5ZNw=w1366-h912-s-no-gm?authuser=0"
+                                    alt="Anurag Maloo - Founder TVGF"
                                     className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000"
                                 />
                             </div>
@@ -146,11 +155,11 @@ export default function FounderStory() {
                             </div>
                             {/* Force aspect ratio using inline styles for guaranteed iframe visibility */}
                             <div className="w-full bg-black relative" style={{ paddingTop: '56.25%' }}>
-                                <iframe 
+                                <iframe
                                     className="absolute top-0 left-0 w-full h-full border-0"
-                                    src="https://www.youtube.com/embed/0d673rf45mo?rel=0&modestbranding=1" 
-                                    title="Against All Odds: A Mountaineer's Tale of Survival, Hope, and Courage" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    src="https://www.youtube.com/embed/0d673rf45mo?rel=0&modestbranding=1"
+                                    title="Against All Odds: A Mountaineer's Tale of Survival, Hope, and Courage"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
                                 ></iframe>
                             </div>
@@ -161,8 +170,8 @@ export default function FounderStory() {
                     <div className="mb-32">
                         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-1 border-t border-glacier-navy/5 pt-20">
                             {credentials.map((cred, i) => (
-                                <motion.div 
-                                    key={i} 
+                                <motion.div
+                                    key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -177,6 +186,47 @@ export default function FounderStory() {
                         </div>
                     </div>
 
+                    {/* Affiliations & Network Section */}
+                    <div className="mb-32 border-t border-glacier-navy/5 pt-24">
+                        <div className="text-center mb-16">
+                            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-glacier-teal font-nohemi px-4 py-1.5 border border-glacier-teal/20 rounded-full">
+                                Global Reach
+                            </span>
+                            <h2 className="text-3xl md:text-5xl font-nohemi text-glacier-navy mt-8 tracking-tight">
+                                Affiliations & <span className="text-glacier-teal italic">Network</span>
+                            </h2>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-6xl mx-auto px-6">
+                            {affiliations.map((affil, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, scale: 0.98, y: 20 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                                    className="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] max-w-[260px] bg-glacier-offwhite p-4 md:p-6 rounded-[2rem] flex flex-col items-center justify-center text-center group hover:bg-white hover:shadow-xl hover:shadow-glacier-navy/10 transition-all duration-500 border border-transparent hover:border-glacier-navy/5 h-32 md:h-40 relative overflow-hidden"
+                                >
+                                    {/* Logo Image */}
+                                    <div className="w-full h-full flex items-center justify-center z-10">
+                                        <img
+                                            src={affil.img}
+                                            alt={affil.name}
+                                            className="max-h-[75%] max-w-[85%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100 group-hover:scale-110"
+                                        />
+                                    </div>
+
+                                    {/* Role Tag */}
+                                    <div className="absolute bottom-4 left-0 w-full transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20 pointer-events-none flex justify-center">
+                                        <span className="text-[9px] md:text-[10px] font-bold font-nohemi uppercase tracking-[0.2em] text-glacier-teal bg-white/95 shadow-sm border border-glacier-teal/10 px-4 py-1.5 rounded-full inline-block backdrop-blur-md">
+                                            {affil.role}
+                                        </span>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Photo Gallery - Expedition Archives */}
                     <div className="mb-12">
                         <div className="text-center mb-24">
@@ -185,7 +235,7 @@ export default function FounderStory() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {photos.map((p, i) => (
-                                <motion.div 
+                                <motion.div
                                     key={i}
                                     initial={{ opacity: 0, scale: 0.98 }}
                                     whileInView={{ opacity: 1, scale: 1 }}

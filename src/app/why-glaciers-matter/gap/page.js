@@ -69,7 +69,7 @@ const GapPage = () => {
                         </span>
                         <h1 className="text-5xl md:text-[8rem] lg:text-[10rem] font-nohemi text-white mb-10 leading-[0.8] tracking-tighter drop-shadow-2xl">
                             The Orphaned <br />
-                            <span className="text-glacier-teal italic text-3xl md:text-8xl">Crisis</span>
+                            <span className="text-glacier-teal italic text-5xl md:text-[8rem]">Crisis</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/50 font-light font-cabin max-w-3xl mx-auto mt-10">
                             Preparedness for glacier loss sits between climate mitigation, disaster response, and development.
