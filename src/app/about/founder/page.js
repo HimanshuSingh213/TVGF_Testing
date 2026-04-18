@@ -194,7 +194,7 @@ export default function FounderStory() {
                                 <div className="w-12 h-1 bg-glacier-teal mb-8"></div>
                                 <blockquote className="text-2xl md:text-3xl lg:text-4xl text-glacier-navy font-nohemi italic leading-tight tracking-tight relative pr-4 md:pr-12">
                                     <FaQuoteLeft className="text-glacier-teal/10 text-6xl md:text-8xl absolute -top-8 -left-4 md:-top-12 md:-left-8 z-0 pointer-events-none" />
-                                    <span className="relative z-10">"If we can build national financial and digital infrastructure at scale, we can build resilience infrastructure for glaciers."</span>
+                                    <span className="relative z-10">&quot;If we can build national financial and digital infrastructure at scale, we can build resilience infrastructure for glaciers.&quot;</span>
                                 </blockquote>
                             </div>
                         </motion.div>
