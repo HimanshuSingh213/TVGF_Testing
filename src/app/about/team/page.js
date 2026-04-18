@@ -111,7 +111,7 @@ export default function TeamPage() {
                         <div className="text-center mb-24">
                             <h2 className="text-4xl md:text-6xl font-nohemi text-glacier-navy tracking-tight">Expert <span className="text-glacier-teal italic">Panel</span></h2>
                         </div>
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-14">
+                        <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-6 lg:gap-x-8 gap-y-14">
                             {expertPanel.map((exp, i) => (
                                 <motion.div 
                                     key={i} 
@@ -128,9 +128,9 @@ export default function TeamPage() {
                                             alt={exp.name} 
                                         />
                                     </div>
-                                    <h4 className="text-lg md:text-xl font-nohemi text-glacier-navy mb-2 group-hover:text-glacier-teal transition-colors leading-tight">{exp.name}</h4>
-                                    <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-glacier-navy/50 mb-3">{exp.niche}</p>
-                                    <p className="text-[10px] text-glacier-teal font-medium leading-tight uppercase tracking-widest">{exp.institution}</p>
+                                    <h4 className="text-sm font-nohemi text-glacier-navy mb-1 group-hover:text-glacier-teal transition-colors leading-tight">{exp.name}</h4>
+                                    <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-glacier-navy/50 mb-1">{exp.niche}</p>
+                                    <p className="text-[9px] text-glacier-teal font-medium leading-tight uppercase tracking-wide">{exp.institution}</p>
                                 </motion.div>
                             ))}
                         </div>
