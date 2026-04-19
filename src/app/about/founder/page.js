@@ -111,7 +111,7 @@ export default function FounderStory() {
     ];
 
     const photos = [
-        { url: "/annapurna.jpg", caption: "Mt. Annapurna Expedition, 2023" },
+        { url: "/viewheights.jpg", caption: "Mt. Annapurna Expedition, 2023" },
         { url: "/ladakh.jpg", caption: "High Altitude Monitoring, Ladakh" },
         { url: "/ukfootprint.jpg", caption: "Science Reconnaissance, Uttarakhand" },
         { url: "/sikkim.jpg", caption: "Community Dialogue, Sikkim" }
