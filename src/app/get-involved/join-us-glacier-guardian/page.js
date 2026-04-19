@@ -243,7 +243,7 @@ export default function JoinGlacierGuardian() {
 
           <div className="mt-10 flex flex-col md:flex-row gap-8 items-start">
             <p className="text-xl max-w-xl leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.75)" }}>
-              A glacier guardian is more than a donor — you become a witness, a voice, and a vital thread in the network protecting Earth's cryosphere.
+              A glacier guardian is more than a donor — you become a witness, a voice, and a vital thread in the network protecting Earth&#39;s cryosphere.
             </p>
             <div className="shrink-0 rounded-2xl p-6 text-center min-w-[180px]"
               style={{ border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.1)" }}>
@@ -397,7 +397,7 @@ export default function JoinGlacierGuardian() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              <div className="text-4xl mb-4 font-serif leading-none" style={{ color: C.teal }}>"</div>
+              <div className="text-4xl mb-4 font-serif leading-none" style={{ color: C.teal }}>&quot;</div>
               <p className="text-base leading-relaxed mb-6 italic" style={{ fontFamily: "'Cormorant Garamond', serif", color: C.warmGrey }}>
                 {t.quote}
               </p>

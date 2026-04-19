@@ -302,7 +302,7 @@ export default function GetInvolvedPage() {
               className="text-xl md:text-2xl font-light max-w-2xl leading-relaxed opacity-0"
               style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.75)" }}
             >
-              Three pathways. One mission. Choose how you want to defend Earth's
+              Three pathways. One mission. Choose how you want to defend Earth&#39;s
               last great ice — through partnership, skill, or community.
             </p>
             <div
@@ -472,7 +472,7 @@ export default function GetInvolvedPage() {
               Every Action Matters
             </p>
             <h2 className="text-4xl md:text-6xl font-light mb-6 leading-tight text-white">
-              The glaciers can't wait.
+              The glaciers can&#39;t wait.
               <br />
               <span className="italic" style={{ color: C.lightTeal }}>Neither can we.</span>
             </h2>
