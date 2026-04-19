@@ -203,7 +203,7 @@ export default function PartnerWithUs() {
             className="text-xl md:text-2xl font-light max-w-2xl leading-relaxed opacity-0"
             style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.75)" }}
           >
-            Join a coalition of institutions, corporations, and foundations working to preserve Earth's vanishing glaciers through science, storytelling, and systemic change.
+            Join a coalition of institutions, corporations, and foundations working to preserve Earth&apos;s vanishing glaciers through science, storytelling, and systemic change.
           </p>
         </section>
       </div>

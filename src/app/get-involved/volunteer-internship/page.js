@@ -245,8 +245,8 @@ export default function VolunteerInternships() {
           className="text-xl max-w-2xl leading-relaxed opacity-0"
           style={{ fontFamily: "'Inter', sans-serif", color: C.warmGrey }}
         >
-          Whether you're a scientist, storyteller, strategist, or student — there's a place for
-          your skills in the fight to preserve Earth's glaciers.
+          Whether you&apos;re a scientist, storyteller, strategist, or student — there&apos;s a place for
+          your skills in the fight to preserve Earth&apos;s glaciers.
         </p>
       </section>
 

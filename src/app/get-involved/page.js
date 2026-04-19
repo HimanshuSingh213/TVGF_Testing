@@ -71,7 +71,7 @@ const cards = [
     title: "Join as Glacier Guardian",
     subtitle: "Become Part of the Community",
     description:
-      "A glacier guardian is a witness, a voice, and a financial pillar. Become part of a global community protecting Earth's cryosphere — one rupee, one story at a time.",
+      "A glacier guardian is a witness, a voice, and a financial pillar. Become part of a global community protecting Earth&apos;s cryosphere — one rupee, one story at a time.",
     href: "/get-involved/join-us-glacier-guardian",
     accent: C.crimson,
     accentDim: C.crimsonDim,
@@ -477,7 +477,7 @@ export default function GetInvolvedPage() {
               <span className="italic" style={{ color: C.lightTeal }}>Neither can we.</span>
             </h2>
             <p className="max-w-xl mx-auto mb-12 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", color: "rgba(255,255,255,0.5)" }}>
-              Over 50% of the world's glaciers are projected to vanish by 2100.
+              Over 50% of the world&apos;s glaciers are projected to vanish by 2100.
               Every partnership, every volunteer hour, every guardian subscription extends the timeline.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
