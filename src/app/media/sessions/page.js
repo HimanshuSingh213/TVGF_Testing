@@ -52,7 +52,7 @@ const sessionsData = [
     date: "2026-02-24T10:00:00Z",
     status: "completed",
     videoUrl: null,
-    image: "https://static.vecteezy.com/system/resources/previews/000/742/601/large_2x/himalayas-mountain-landscape-photo.jpg",
+    image: "/MediaSession.JPG",
     substackUrl: "https://thevoiceofglaciers.substack.com/p/when-glaciers-retreat-societies-transform",
     panelists: [
       { name: "Anoop Nautiyal", role: "Founder, SDC Foundation" },

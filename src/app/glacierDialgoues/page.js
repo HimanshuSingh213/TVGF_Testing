@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, PlayCircle, ArrowRight, Mic2 } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -8,7 +9,8 @@ import { podcasts } from "@/data/podcasts";
 import ShareButtons from "@/components/shareButtons";
 
 export default function PodcastPage() {
-  const upcoming = podcasts.filter((p) => p.status === "upcoming");
+  // Sort podcasts by date (newest first)
+  const allDialogues = [...podcasts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <div className="min-h-screen flex flex-col font-cabin bg-glacier-light dark:bg-glacier-dark transition-colors duration-300">
@@ -56,10 +58,11 @@ export default function PodcastPage() {
 
           {/* SECTION DIVIDER */}
           <div className="flex items-center gap-4 mb-10">
+             <h2 className="font-nohemi text-2xl text-glacier-dark dark:text-glacier-light whitespace-nowrap">Explore Dialogues</h2>
             <div className="h-[1px] flex-grow bg-glacier-primary/20"></div>
           </div>
 
-          <Section data={upcoming} />
+          <Section data={allDialogues} />
         </div>
       </main>
 
@@ -101,10 +104,11 @@ function PodcastCard({ podcast }) {
       <Link href={`/glacierDialgoues/${podcast.slug}`} className="flex flex-col flex-grow">
         {/* Image Container */}
         <div className="relative aspect-video overflow-hidden">
-          <img
+          <Image
             src={podcast.image}
             alt={podcast.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
           
           {/* Overlay Gradient */}
@@ -151,5 +155,6 @@ function PodcastCard({ podcast }) {
     </div>
   );
 }
+
 
 

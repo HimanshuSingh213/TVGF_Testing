@@ -53,15 +53,6 @@ export default function Navbar() {
       ]
     },
     {
-      name: "Get Involved",
-      href: "/get-involved",
-      subpages: [
-        { label: "Partner With Us", href: "/get-involved/partner-with-us", desc: "Institutional and funding partnerships." },
-        { label: "Volunteer & Internships", href: "/get-involved/volunteer-internship", desc: "Contribute your skills to the cause." },
-        { label: "Join as Glacier Guardian", href: "/get-involved/join-us-glacier-guardian", desc: "Become part of the community." }
-      ]
-    },
-    {
       name: "Media",
       href: "/media",
       subpages: [
@@ -69,6 +60,15 @@ export default function Navbar() {
         { label: "Glacier Dialogues Sessions", href: "/media/sessions", desc: "Archive of past dialogues." },
         { label: "Publications & Reports", href: "/media/publications", desc: "Research and policy briefs." },
         { label: "Photography & Film", href: "/media/visual", desc: "Visuals from the frontlines." }
+      ]
+    },
+    {
+      name: "Get Involved",
+      href: "/get-involved",
+      subpages: [
+        { label: "Partner With Us", href: "/get-involved/partner", desc: "Institutional and funding partnerships." },
+        { label: "Volunteer & Internships", href: "/get-involved/volunteer", desc: "Contribute your skills to the cause." },
+        { label: "Join as Glacier Guardian", href: "/get-involved/glacier-guardian", desc: "Become part of the community." }
       ]
     }
   ];
@@ -329,7 +329,7 @@ export default function Navbar() {
 export const JoinAsGlacierGuardianButton = ({ onClick }) => {
   return (
     <Link
-      href="/get-involved/join-us-glacier-guardian"
+      href="/get-involved/glacier-guardian"
       onClick={onClick}
       className="w-full flex items-center justify-center px-4 py-2 bg-glacier-teal text-white hover:bg-glacier-teal/90 text-sm font-medium rounded-md transition-colors font-cabin"
     >
@@ -341,7 +341,7 @@ export const JoinAsGlacierGuardianButton = ({ onClick }) => {
 export const PartnerWithUsButton = ({ onclick }) => {
   return (
     <Link
-      href="/get-involved/partner-with-us"
+      href="/get-involved/partner"
       onClick={onclick}
       className="w-full flex items-center justify-center px-4 py-2 border-2 border-white text-white hover:bg-white hover:text-glacier-navy text-sm font-medium rounded-md transition-colors font-cabin"
     >
