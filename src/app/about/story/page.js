@@ -202,8 +202,25 @@ export default function OurStory() {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-1 lg:order-2 aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl">
-                            <img src="/SumitValleyTrail.jpg" alt="Summit Valley Experience" className="w-full h-full object-cover transition-all duration-1000 scale-105 hover:scale-100" />
+                        <div className="order-1 lg:order-2 aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl relative group">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=34.0152,77.4549&t=k&z=12&ie=UTF8&iwloc=&output=embed" 
+                                className="w-full h-full border-0 grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 scale-[1.05]" 
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Summit Valley Approach Map"
+                            ></iframe>
+                            <div className="absolute inset-0 bg-glacier-navy/10 pointer-events-none group-hover:bg-transparent transition-colors duration-700"></div>
+                            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-xl px-5 py-3 rounded-2xl border border-glacier-navy/10 shadow-2xl pointer-events-none transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-[10px] font-bold text-glacier-teal uppercase tracking-[0.2em] flex items-center gap-2">
+                                        <span className="w-2 h-2 bg-glacier-teal rounded-full animate-pulse"></span>
+                                        Stok Valley Region
+                                    </span>
+                                    <span className="text-[9px] text-glacier-navy/40 font-medium">34.0152° N, 77.4549° E</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
