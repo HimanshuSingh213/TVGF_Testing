@@ -22,6 +22,10 @@ export default function TeamPage() {
         { name: "Divya Nawale", title: "Policy Specialist", desc: "UNEP, ex-ADB, ex-UNFCCC climate policy expert.", img: placeholderImg }
     ];
 
+    const advisors = [
+        { name: "Romola Butalia", title: "Writer, Conservationist & Senior Media Person", img: placeholderImg },
+    ];
+
     const expertPanel = [
         { name: "Dr. Arun Shrestha", institution: "ex-ICIMOD, Nepal", niche: "Sr. Glaciologist", img: placeholderImg },
         { name: "Dr. Ashim Sattar", institution: "IIT Bhubaneswar", niche: "GLOF Expert (Cryosense)", img: placeholderImg },
@@ -72,12 +76,12 @@ export default function TeamPage() {
             <section className="py-32 px-6 md:px-12 bg-white relative">
                 <div className="max-w-7xl mx-auto">
                     
-                    {/* Core Team - Larger, Professional Grid */}
-                    <div className="mb-48">
-                        <div className="text-center mb-24">
-                            <h2 className="text-4xl md:text-6xl font-nohemi text-glacier-navy tracking-tight">Core <span className="text-glacier-teal italic">Team</span></h2>
+                    {/* Core Team - 4 columns to reduce whitespace */}
+                    <div className="mb-32">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl font-nohemi text-glacier-navy tracking-tight">Core <span className="text-glacier-teal italic">Team</span></h2>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
                             {coreTeam.map((member, i) => (
                                 <motion.div 
                                     key={i} 
@@ -87,7 +91,42 @@ export default function TeamPage() {
                                     transition={{ delay: i * 0.05, duration: 0.6 }}
                                     className="flex flex-col group"
                                 >
-                                    <div className="w-[78%] md:w-[80%] mx-auto block aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 shadow-2xl shadow-glacier-navy/10 relative">
+                                    <div className="w-[85%] mx-auto block aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 shadow-xl shadow-glacier-navy/10 relative">
+                                        <img 
+                                            src={member.img} 
+                                            className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
+                                            alt={member.name} 
+                                        />
+                                        <div className="absolute inset-0 bg-glacier-navy/5 group-hover:bg-transparent transition-colors duration-700"></div>
+                                    </div>
+                                    <div className="px-2 text-center">
+                                        <h3 className="text-xl md:text-2xl font-nohemi text-glacier-navy mb-1">{member.name}</h3>
+                                        <div className="w-6 h-[1.5px] bg-glacier-teal my-3 mx-auto"></div>
+                                        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-glacier-navy/60 mb-3">{member.title}</p>
+                                        <p className="text-[11px] text-glacier-navy/50 font-light leading-relaxed max-w-[200px] mx-auto">{member.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Advisors Section - Added before Expert Panel */}
+                    <div className="mb-48 border-t border-glacier-navy/5 pt-32">
+                        <div className="text-center mb-24">
+                            <h2 className="text-4xl md:text-6xl font-nohemi text-glacier-navy tracking-tight">Senior <span className="text-glacier-teal italic">Advisors</span></h2>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 justify-center">
+                             {advisors.map((member, i) => (
+                                <motion.div 
+                                    key={i} 
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.05, duration: 0.6 }}
+                                    className="flex flex-col group items-center mx-auto"
+                                >
+                                    <div className="w-[60%] mx-auto block aspect-[4/5] rounded-[2rem] overflow-hidden mb-8 shadow-xl shadow-glacier-navy/10 relative">
                                         <img 
                                             src={member.img} 
                                             className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
@@ -96,13 +135,19 @@ export default function TeamPage() {
                                         <div className="absolute inset-0 bg-glacier-navy/10 group-hover:bg-transparent transition-colors duration-700"></div>
                                     </div>
                                     <div className="px-4 text-center">
-                                        <h3 className="text-3xl font-nohemi text-glacier-navy mb-2">{member.name}</h3>
-                                        <div className="w-8 h-[2px] bg-glacier-teal my-4 mx-auto"></div>
-                                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-glacier-navy/60 mb-4">{member.title}</p>
-                                        <p className="text-sm text-glacier-navy/60 font-light leading-relaxed">{member.desc}</p>
+                                        <h3 className="text-2xl font-nohemi text-glacier-navy mb-2">{member.name}</h3>
+                                        <div className="w-6 h-[2px] bg-glacier-teal my-3 mx-auto"></div>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-glacier-navy/60 leading-relaxed max-w-[250px] mx-auto">{member.title}</p>
                                     </div>
                                 </motion.div>
                             ))}
+                        </div>
+
+                        {/* Placeholder for pending advisors */}
+                        <div className="mt-20 text-center">
+                            <p className="text-lg md:text-xl font-nohemi text-glacier-navy/40 italic">
+                                Senior advisors being announced shortly
+                            </p>
                         </div>
                     </div>
 
@@ -113,8 +158,8 @@ export default function TeamPage() {
                         </div>
                         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-6 lg:gap-x-8 gap-y-14">
                             {expertPanel.map((exp, i) => (
-                                <motion.div 
-                                    key={i} 
+                                <motion.div
+                                    key={i}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
@@ -122,10 +167,10 @@ export default function TeamPage() {
                                     className="group text-center max-w-[240px] mx-auto w-full"
                                 >
                                     <div className="w-[76%] md:w-[80%] mx-auto aspect-[4/5] rounded-[1.75rem] overflow-hidden mb-5 shadow-[0_20px_40px_-15px_rgba(0,128,128,0.1)] relative">
-                                        <img 
-                                            src={exp.img} 
-                                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
-                                            alt={exp.name} 
+                                        <img
+                                            src={exp.img}
+                                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                                            alt={exp.name}
                                         />
                                     </div>
                                     <h4 className="text-sm font-nohemi text-glacier-navy mb-1 group-hover:text-glacier-teal transition-colors leading-tight">{exp.name}</h4>
